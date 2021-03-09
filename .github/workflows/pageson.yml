@@ -9,7 +9,7 @@ jobs:
       - uses: octokit/request-action@v2.x
         id: get_latest_release
         with:
-          route: POST /repos/{$GITHUB_REPOSITORY}/pages/builds
+          route: POST /repos/${{ github.repository }}/pages/builds
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
